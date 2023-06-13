@@ -10,7 +10,7 @@ class Visitor
   end
 
   def cash_conversion(money)
-    dollar_integer = money.delete("$").to_i
+    money.delete("$").to_i
   end
 
   def add_preference(name)
