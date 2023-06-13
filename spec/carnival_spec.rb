@@ -101,11 +101,13 @@ describe 'Carnival' do
       ride1.board_rider(visitor2)
       ride1.board_rider(visitor3)
       ride1.board_rider(visitor1)
+
       ride2.board_rider(visitor1)
-      ride2.board_rider(visitor2)
+      ride2.board_rider(visitor2) # should not be allowed, not enough money
+
       ride3.board_rider(visitor3)
 
-      expect(carnival1.total_revenue).to eq(4+10+2)
+      expect(carnival1.total_revenue).to eq(4+5+2)
     end
   end
 end
