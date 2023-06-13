@@ -17,10 +17,12 @@ class Ride
     @rider_log = Hash.new { |h, k| h[k] = 0}
   end
 
-  def board_rider(rider)
-    @rider_log[rider] +=1
-    @total_revenue += @admission_fee
-    rider.take_fee(@admission_fee)
+  def board_rider(rider) # checks height, ride type, and money requirements
+    if rider.height >= @min_height && rider.spending_money >= @admission_fee && rider.preferences.include?(@excitement)
+      @rider_log[rider] +=1
+      @total_revenue += @admission_fee
+      rider.take_fee(@admission_fee)
+    end
   end
 
 end
