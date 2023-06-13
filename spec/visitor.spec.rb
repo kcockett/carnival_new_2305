@@ -1,4 +1,5 @@
 require 'rspec'
+require 'visitor'
 
 describe 'Visitor' do
   describe '#initialize' do
