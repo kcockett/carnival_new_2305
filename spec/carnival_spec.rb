@@ -22,6 +22,8 @@ describe 'Carnival' do
       expect(@carnival1.rides).to eq([])
       @carnival1.add_ride(@ride1)
       expect(@carnival1.rides).to eq([@ride1])
+      @carnival1.add_ride(@ride2)
+      expect(@carnival1.rides).to eq([@ride1, @ride2])
     end
   end
 end
