@@ -3,8 +3,8 @@ class Visitor
   attr_reader :name, :height, :spending_money, :preferences
 
   def initialize(name, height, money)
-    @name = name.to_s
-    @height = height.to_i
+    @name = name
+    @height = height
     @spending_money = cash_conversion(money)
     @preferences = []
   end
@@ -14,7 +14,7 @@ class Visitor
   end
 
   def add_preference(name)
-    @preferences << name.to_s.to_sym
+    @preferences << name
   end
 
   def tall_enough?(min_height)

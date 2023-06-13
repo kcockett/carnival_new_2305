@@ -1,6 +1,6 @@
 require 'rspec'
 #require '.lib/visitor'
-#require './lib/ride'
+require './lib/ride'
 
 describe 'Ride' do
   describe '#initialize' do
