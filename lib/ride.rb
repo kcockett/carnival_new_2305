@@ -1,7 +1,12 @@
 require './lib/visitor'
 
 class Ride
-  attr_reader :name, :min_height, :admission_fee, :excitement, :total_revenue
+  attr_reader :name, 
+              :min_height, 
+              :admission_fee, 
+              :excitement, 
+              :total_revenue,
+              :rider_log
 
   def initialize(info_hash)
     @name = info_hash[:name]
@@ -15,4 +20,5 @@ class Ride
   def board_rider(rider)
     @rider_log[rider] +=1
   end
+
 end
