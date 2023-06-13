@@ -19,6 +19,8 @@ class Ride
 
   def board_rider(rider)
     @rider_log[rider] +=1
+    @total_revenue += @admission_fee
+    rider.take_fee(@admission_fee)
   end
 
 end
