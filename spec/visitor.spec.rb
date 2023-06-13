@@ -14,7 +14,7 @@ describe 'Visitor' do
   describe '#add_preference' do
     it 'should add a preference to the visitor object' do
       visitor1 = Visitor.new("Bruce", 54, "$10")
-      expect(visitor1.preference).to eq([])
+      expect(visitor1.preferences).to eq([])
       visitor1.add_preference(:gentle)
       visitor1.add_preference(:thrilling)
       expect(visitor1.preferences).to eq([:gentle, :thrilling])
